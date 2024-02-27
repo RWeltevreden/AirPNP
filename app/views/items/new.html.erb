@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h2>Add a new item to rent out</h2>
+
+  <%= simple_form_for(@item) do |f| %>
+    <!-- [...] -->
+    <%= f.input :name, as: :string %>
+    <%= f.input :price, as: :integer %>
+    <%= f.input :description, as: :string %>
+    <%= f.input :location, as: :string %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+    <!-- [...] -->
+  <% end %>
+</div>
