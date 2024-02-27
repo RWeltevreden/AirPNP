@@ -1,1 +1,40 @@
 // Specific CSS for your home-page
+.banner {
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.head{
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-top: 150px;
+  h1 {
+    font-size: 70px;
+    color: white;
+  }
+  p {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.homepage {
+  background-color: #EBD9B4;
+  height: 1000px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+#popular {
+    text-align: center;
+    color: white;
+    align-items: center;
+    margin-top: 40px
+}
+
+.card {
+  margin-top: 50px;
+}
