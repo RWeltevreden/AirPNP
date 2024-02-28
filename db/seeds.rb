@@ -45,9 +45,9 @@ user3 = User.create(email: "romeeweltevreden@hotmail.com", password: "test123")
 puts "creating items"
 item1 = Item.new(
   user: user1,
-  name: "Partytent",
+  name: "Party tent",
   price: "#{rand(1..200)} €",
-  description: "can fit up to 50 people",
+  description: "Can fit up to 50 people",
   location: "Amsterdam")
 
 file_url = "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -59,7 +59,7 @@ item2 = Item.new(
   user: user1,
   name: "table",
   price: "#{rand(1..200)} €",
-  description: "suited for outdoors",
+  description: "Suited for outdoors",
   location: "Amsterdam")
 
 file_url = "https://www.coku.co.uk/cdn/shop/products/9D6C3F91-95C9-421A-BC54-46136641C88F_1445x.jpg?v=1682000784"
@@ -71,7 +71,7 @@ item3 = Item.new(
   user: user1,
   name: "disco ball",
   price: "#{rand(1..200)} €",
-  description: "creating a beautiful atmosphere",
+  description: "Creating a beautiful atmosphere",
   location: "Oost")
 
 file_url = "https://cdn.shopify.com/s/files/1/0688/8872/3766/files/disco_ball_invented_1_480x480.jpg?v=1684972239"
@@ -81,7 +81,7 @@ item3.save!
 
 item4 = Item.new(
   user: user2,
-  name: "party hats",
+  name: "Party hats",
   price: "#{rand(1..200)} €",
   description: "20 hats", location: "Amsterdam")
 
@@ -92,7 +92,7 @@ item4.save!
 
 item5 = Item.new(
   user: user2,
-  name: "outdoor lights",
+  name: "Outdoor lights",
   price: "#{rand(1..200)} €",
   description: "5 meters",
   location: "West")
@@ -104,9 +104,9 @@ item5.save!
 
 item6 = Item.new(
   user: user2,
-  name: "stereo set",
+  name: "Stereo set",
   price: "#{rand(1..200)} €",
-  description: "suitable for parties",
+  description: "Suitable for parties",
   location: "Amstelveen")
 
 file_url = "https://cdn.myonlinestore.eu/93bf9c9a-6be1-11e9-a722-44a8421b9960/image/cache/full/dda2ba5fabaa45cd53659addcf4212195ca579a9.jpg?20240214105342"
@@ -116,9 +116,9 @@ item6.save!
 
 item7 = Item.new(
   user: user2,
-  name: "glow sticks",
+  name: "Glow sticks",
   price: "#{rand(1..200)} €",
-  description: "available in 5 different colors",
+  description: "Available in 5 different colors",
   location: "Amsterdam")
 
 file_url = "https://i.etsystatic.com/31178789/r/il/ba8375/3643189366/il_570xN.3643189366_p826.jpg"
@@ -129,9 +129,9 @@ item7.save!
 
 item8 = Item.new(
   user: user3,
-  name: "party tent",
+  name: "Party tent",
   price: "#{rand(1..200)} €",
-  description: "can fit up to 30 people",
+  description: "Can fit up to 30 people",
   location: "Zuidoost")
 
 file_url = "https://emielspartyverhuur.nl/wp-content/uploads/2016/11/o16bwmya.bmp"
@@ -141,9 +141,9 @@ item8.save!
 
 item9 = Item.new(
   user: user3,
-  name: "outdoor table",
+  name: "Outdoor table",
   price: "#{rand(1..200)} €",
-  description: "suitable for bbq's",
+  description: "Suitable for bbq's",
   location: "Noord")
 
   file_url = "https://www.thespruce.com/thmb/agMCiMTigXWwoplUPJTeHy1wQ6M=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-outdoor-table-plans-5070848-hero-e56542f9054c4a92b888438f5e598fcc.jpg"
@@ -153,9 +153,9 @@ item9 = Item.new(
 
 item10 = Item.new(
   user: user3,
-  name: "champagne glasses",
+  name: "Champagne glasses",
   price: "#{rand(1..200)} €",
-  description: "different colors available",
+  description: "Different colors available",
   location: "Centrum")
 
   file_url = "https://savagevines.co.uk/wp-content/uploads/2021/11/L-Atelier-Du-Vin-Champagne-Glass-Set-900x0-c-default.jpg"
