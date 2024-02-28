@@ -1,9 +1,16 @@
-<!-- app/views/articles/index.html.erb -->
-<%= cl_image_tag("lty6q0jzhix29dsxrror",
-      width: 400, height: 300, crop: :fill) %>
 
-<%= cl_image_tag("lga5qstdoinnxm4wblxz",
-      width: 400, height: 300, crop: :fill) %>
+<h1>Party Items to Rent</h1>
 
-<%= cl_image_tag("s1p3avf58nhtwfcxaox4",
-      width: 400, height: 300, crop: :fill) %>
+<% @items.each do |item| %>
+  <div>
+    <%= image_tag(item.photo) if item.photo.attached? %>
+    <h2><%= item.name %></h2>
+    <p><%= item.description %></p>
+    <p>Location: <%= item.location %></p>
+    <p>Price: <%= item.price %></p>
+  </div>
+<% end %>
+
+<%# Update Views and Forms:
+In your views (app/views/items/index.html.erb, app/views/items/show.html.erb, etc.), you can display the latitude and longitude.
+You may also want to update your forms to include an address field. %>
