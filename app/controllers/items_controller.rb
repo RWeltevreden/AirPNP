@@ -18,7 +18,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-  end 
+    @item = Item.find(params[:id])
+  end
 
   # def configure_permitted_parameters
   #   # For additional fields in app/views/devise/registrations/new.html.erb
