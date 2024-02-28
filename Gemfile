@@ -78,3 +78,7 @@ group :test do
 end
 
 gem "cloudinary"
+
+gem 'geocoder'
+gem 'leaflet-rails'
+gem 'open-uri'
