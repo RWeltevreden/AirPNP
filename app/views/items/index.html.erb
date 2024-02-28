@@ -1,0 +1,28 @@
+<div class="tohomepage">
+  <%= link_to "Back to homepage", root_path %>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <% @items.each do |item| %>
+      <div class="col-3">
+        <div class="card d-flex justify-content-between" style="height:500px">
+          <%= cl_image_tag(item.photo.key, class:"card-img-top", height: 300 )%>
+            <div class="card-body">
+              <h2>
+                <%= link_to item.name, item_path(item), class: "text-decoration-none" %>
+              </h2>
+              <p>
+                <%= item.description %>
+              </p>
+              <p>
+                <%= item.price %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+</div>
