@@ -1,6 +1,8 @@
-<div class="tohomepage">
-  <%= link_to "Back to homepage", root_path %>
-</div>
+<div class="tohomepage d-flex justify-content-around">
+    <%= link_to "Back to homepage", root_path %>
+    <%= link_to "Add a new item", new_item_path %>
+  </div>
+
 
 <div class="container">
   <div class="row">
@@ -8,7 +10,10 @@
     <% @items.each do |item| %>
       <div class="col-3">
         <div class="card d-flex justify-content-between" style="height:500px">
-          <%= cl_image_tag(item.photo.key, class:"card-img-top", height: 300 )%>
+        <% if item.photo.attached?%>
+          <%= cl_image_tag item.photo.key, class:"card-img-top", height: 300 %>
+        <% end %>
+
             <div class="card-body">
               <h2>
                 <%= link_to item.name, item_path(item), class: "text-decoration-none" %>
