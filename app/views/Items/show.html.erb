@@ -1,13 +1,15 @@
+<%= render 'image' %>
 
-<%@item.photos.each do |photo|%>
-  <%= cl_image_tag(photo.key, height: 300, width: 400, crop: :fill) %>
-<%end%>
-
-<%=# lty6q0jzhix29dsxrror @item.photo.key, height: 300, width: 400, crop: :fill %>
-<%=# s1p3avf58nhtwfcxaox4 @item.photo.key, height: 300, width: 400, crop: :fill %>
-<%=# lga5qstdoinnxm4wblxz @item.photo.key, height: 300, width: 400, crop: :fill %>
-
-
-<%# Update Views and Forms:
-In your views (app/views/items/index.html.erb, app/views/items/show.html.erb, etc.), you can display the latitude and longitude.
-You may also want to update your forms to include an address field. %>
+<div class="container-listing">
+  <div class="row listing-content">
+    <!-- Details box -->
+    <div class="item col-md-8">
+      <div class="item-name">
+        <h3><strong><%= @item.name %></strong></h3>
+        <p><%= @item.description %></p>
+        <p><%= @item.location %></p>
+        <p><%= @item.price %></p>
+      </div><br>
+    </div>
+  </div>
+</div>
