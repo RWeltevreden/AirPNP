@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
     end
      # Will raise ActiveModel::ForbiddenAttributesError
 
-
   end
 
   private
