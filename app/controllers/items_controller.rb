@@ -17,6 +17,8 @@ class ItemsController < ApplicationController
      # Will raise ActiveModel::ForbiddenAttributesError
   end
 
+  def show
+  end 
 
   # def configure_permitted_parameters
   #   # For additional fields in app/views/devise/registrations/new.html.erb
