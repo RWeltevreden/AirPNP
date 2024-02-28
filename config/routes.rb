@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
   # verb '/path', to 'controller#action'
 
-      resources :items, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
+      resources :items, only: [:index, :show, :new, :create] do
         resources :bookings, only: [:new, :create]
       end
 
