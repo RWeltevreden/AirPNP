@@ -21,8 +21,8 @@
 }
 
 .homepage {
-  background-color: #EBD9B4;
-  height: 1000px;
+  // background-color: #f2e9d6;
+  height: 1300px;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -30,11 +30,17 @@
 
 #popular {
     text-align: center;
-    color: white;
+    color: rgb(209, 202, 202);
     align-items: center;
     margin-top: 40px
 }
 
 .card {
   margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.all {
+  margin-top: 15px;
 }
