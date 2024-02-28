@@ -15,10 +15,12 @@ class ItemsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
      # Will raise ActiveModel::ForbiddenAttributesError
-
   end
 
-  private
+  def index
+    @items = Item.all
+    @photos = Photo.all
+  end
 
   # def configure_permitted_parameters
   #   # For additional fields in app/views/devise/registrations/new.html.erb
@@ -29,7 +31,6 @@ class ItemsController < ApplicationController
   # end
 
   def item_params
-    params.require(:item).permit(:name, :price, :description, :location, :photo)
+    params.require(:item).permit(:name, :price, :description, :location, photos: [])
   end
-
 end
