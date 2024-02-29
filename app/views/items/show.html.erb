@@ -10,6 +10,14 @@
     <p><%= @item.price %></p>
   </div>
 
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<%#  %>
+
+
   <div>
     <%# <%= text_field_tag :opening_date, nil, placeholder: 'Choose a date', data: { controller: "datepicker" } %> %>
     <%# <button type="button" class="btn btn-light" id="bookButton">Book</button> %>
