@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # verb '/path', to 'controller#action'
 
       resources :items, only: [:index, :show, :new, :create] do
-        resources :bookings, only: [:new, :create]
+        resources :bookings, only: [:new, :create, :show]
       end
 
   # Defines the root path route ("/")
