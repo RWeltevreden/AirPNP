@@ -1,6 +1,5 @@
 <div class="tohomepage d-flex justify-content-around">
     <%= link_to "Back to homepage", root_path %>
-    <%= link_to "Add a new item", new_item_path %>
   </div>
 
 
@@ -21,8 +20,7 @@
               <p>
                 <%= item.description %>
               </p>
-              <p>
-                <%= item.price %>
+              <p>€<%= item.price %>
               </p>
             </div>
           </div>

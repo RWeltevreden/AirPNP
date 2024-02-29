@@ -37,9 +37,23 @@ User.destroy_all
 
 puts "creating users"
 
-user1 = User.create(email: "annaputt@hotmail.com", password: "test321")
-user2 = User.create(email: "anna-karsten@hotmail.com", password: "TEST123")
-user3 = User.create(email: "romeeweltevreden@hotmail.com", password: "test123")
+user1 = User.new(email: "annaputt@hotmail.com", password: "test321")
+file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1657695963/tbsvduadlibit1544ebi.jpg")
+
+user1.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user1.save
+
+user2 = User.new(email: "anna-karsten@hotmail.com", password: "TEST123")
+file = URI.open("https://avatars.githubusercontent.com/u/156093237?v=4")
+
+user2.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
+user2.save
+
+user3 = User.new(email: "romeeweltevreden@hotmail.com", password: "test123")
+file = URI.open("https://avatars.githubusercontent.com/u/156311823?v=4")
+
+user3.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
+user3.save
 
 
 puts "creating items"
