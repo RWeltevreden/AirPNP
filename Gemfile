@@ -82,3 +82,4 @@ gem "cloudinary"
 gem 'geocoder'
 gem 'leaflet-rails'
 gem 'open-uri'
+gem "pg_search"

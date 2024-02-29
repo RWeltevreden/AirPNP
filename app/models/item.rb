@@ -9,4 +9,8 @@ class Item < ApplicationRecord
   validates :location, presence: true
   # validates :photo, presence: true
 
+  def self.search(query)
+    where("name LIKE ?", "%#{query}%")
+  end
+
 end
