@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
     @item.user = current_user
     if @item.save
 
-      redirect_to root_path(@items)
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -32,6 +32,22 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :price, :description, :location, :photo)
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    redirect_to dashboard_path(@item)
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to dashboard_path, status: :see_other
   end
 end
 
