@@ -20,8 +20,14 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
   end
+
   def index
     @items = Item.all
+    if params[:query].present?
+      @items = Item.search(params[:query])
+    else
+      @items = Item.all
+    end
   end
 
   def item_params
