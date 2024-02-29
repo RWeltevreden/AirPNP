@@ -40,7 +40,7 @@ puts "creating users"
 user1 = User.new(email: "annaputt@hotmail.com", password: "test321")
 file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1657695963/tbsvduadlibit1544ebi.jpg")
 
-user1.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user1.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
 user1.save
 
 user2 = User.new(email: "anna-karsten@hotmail.com", password: "TEST123")
