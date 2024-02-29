@@ -20,6 +20,14 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
   end
+  def index
+    @items = Item.all
+  end
+
+  def item_params
+    params.require(:item).permit(:name, :price, :description, :location, :photo)
+  end
+end
 
   # def configure_permitted_parameters
   #   # For additional fields in app/views/devise/registrations/new.html.erb
@@ -28,11 +36,3 @@ class ItemsController < ApplicationController
   #   # For additional in app/views/devise/registrations/edit.html.erb
   #   devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   # end
-  def index
-    @items = Item.all
-  end
-
-  def item_params
-    params.require(:item).permit(:name, :price, :description, :location, photos: [])
-  end
-end

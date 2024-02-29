@@ -2,7 +2,7 @@
 
   <h2>Add a new item to rent out</h2>
 
-  <%= simple_form_for(@item) do |f| %>
+  <%= simple_form_for(@item, html: { multipart: true }) do |f| %>
     <!-- [...] -->
     <%= f.input :name, as: :string %>
     <%= f.input :price, as: :integer %>
