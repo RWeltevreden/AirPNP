@@ -16,7 +16,7 @@
 
             <div class="card-body">
               <h2>
-                <%= link_to item.name, item_path(item), class: "text-decoration-none" %>
+                <%= link_to item.name.capitalize, item_path(item), class: "text-decoration-none" %>
               </h2>
               <p>
                 <%= item.description %>

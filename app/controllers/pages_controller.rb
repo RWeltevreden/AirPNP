@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    @items = @user.items
-    @bookings = @user.bookings
+    @items = Item.all.where(user_id: current_user.id).limit(4) if current_user
+    @bookings = Booking.all.where(user_id: current_user.id) if current_user
   end
 end
