@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :location, presence: true
-  validates :photo, presence: true
+  # validates :photo, presence: true
 
   #@item.photos.create(key: "your_cloudinary_image_key_here")
 
