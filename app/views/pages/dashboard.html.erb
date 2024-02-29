@@ -1,2 +1,70 @@
-<h1>Dashboard</h1>
-<p>User:     <%= @user.email.split("@").first %></p>
+
+<div class="container-xl px-4 mt-4">
+  <h2>Dashboard</h2>
+  <hr class="mt-0 mb-4">
+  <p><%= link_to "Back to homepage", root_path %></p>
+   <p><%= link_to "All listings", items_path %></p>
+    <div class="row">
+      <div class="col-xl-4">
+            <!-- Profile picture card-->
+          <div class="card mb-4 mb-xl-0">
+              <div class="card-header">Profile Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                  <div class="profile-picture rounded-circle mb-2">
+                    <%# <%= image_tag current_user.avatar, class: "avatar", alt: "User avatar" %> %>
+                  </div>
+
+                    <!-- Profile picture help block-->
+                  <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                    <!-- Profile picture upload button-->
+                  <button class="btn btn-primary" type="button">Upload new image</button>
+                </div>
+          </div>
+      </div>
+        <div class="col-xl-8">
+            <!-- Account details card-->
+          <div class="card mb-4">
+            <div class="card-header">Account Details</div>
+              <div class="card-body">
+                <form>
+                        <!-- Form Group (email)-->
+                  <div class="mb-3">
+                    <p>Email:
+                    <br>
+                    <%= current_user.email %></p>
+                  </div>
+              </div>
+                </form>
+          </div>
+          </div>
+      </div>
+
+
+  <div class="col-xl-12 d-flex align-items-center justify-content-center">
+    <div class="card mb-4 mx-auto w-100">
+      <div class="card-header">Your listings</div>
+        <div class="card-body row">
+           <% @items.each do |item| %>
+            <div class="col-3">
+           <%= cl_image_tag item.photo.key, class:"card-img-top", height: 300 if item.photo.attached? %>
+           <h4><%= link_to item.name.capitalize, item_path(item) %></h4>
+           <p><%= link_to "Edit item", edit_item_path(item)%></p>
+           <p><%= link_to "Delete", item_path(item),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p>
+              </div>
+           <% end %>
+        </div>
+      </div>
+    </div>
+    <%= link_to "Add a new item", new_item_path %>
+
+
+  <div class="col-xl-12 d-flex align-items-center justify-content-center">
+    <div class="card mb-4 mx-auto w-100">
+      <div class="card-header">Your bookings</div>
+        <div class="card-body">
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%# logo le wagon %>
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "https://media.istockphoto.com/id/1493351005/nl/vector/mirror-disco-ball-with-glitters-icon-shining-nightclub-sphere-dance-music-party-discoball.jpg?s=612x612&w=0&k=20&c=KXj4wsIRpi--sYcDH_ypTLU5rySe5_nH9JfqLvziLHc=" %>
     <% end %>
 
@@ -9,20 +9,38 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div id="search-bar" class="row justify-content-center">
+    <div class="col-sm-12">
+      <div id="items">
+        <%= form_with url: items_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for an item"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+      </div>
+    </div>
+  </div>
+
     <%# login logic %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%# deleted link to home page %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Add new item", "/items/new", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
+            <% if current_user.avatar.attached? %>
+              <%= image_tag current_user.avatar, class: "avatar", alt: "User avatar" %>
+            <% else %>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "Default avatar" %>
+            <% end %>          </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Dashboard", "/dashboard", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
@@ -37,4 +55,6 @@
     </div>
 
   </div>
+</div>
+
 </div>
