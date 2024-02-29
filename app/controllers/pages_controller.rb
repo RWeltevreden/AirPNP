@@ -4,4 +4,10 @@ class PagesController < ApplicationController
   def home
     @items = Item.all.limit(4)
   end
+
+  def dashboard
+    @user = current_user
+    @items = @user.items
+    @bookings = @user.bookings
+  end
 end
