@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
     @booking.item = Item.find(params[:item_id])
     @booking.user = current_user
 
-
     if @booking.save
       redirect_to @booking.item , notice: 'Booking was successfully created.'
       # redirect_to booking_path(@booking)
@@ -16,7 +15,6 @@ class BookingsController < ApplicationController
       render 'items/show'
     end
   end
-
 
   def index
     @bookings = Booking.all

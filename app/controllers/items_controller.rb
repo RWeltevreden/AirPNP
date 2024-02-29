@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @booking = @item.bookings.build
-
   end
 
   def index
@@ -52,5 +51,3 @@ class ItemsController < ApplicationController
     redirect_to dashboard_path, status: :see_other
   end
 end
-
-
