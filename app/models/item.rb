@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   belongs_to :user
   has_many :photos
 
