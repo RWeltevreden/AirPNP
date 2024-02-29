@@ -29,7 +29,7 @@ User.destroy_all
 
 #     file_url = "https://unsplash.com/s/photos/party-accessories#{i + 1}.jpg"
 #     file = URI.open(file_url)
-#     item.photo.attach(io: file, filename: "item#{i + 1}.jpg", content_type: "image/jpeg")
+#     item.photo.attach(io: file, filename: "item#{i + 1}.jpg", content_type: "image/png")
 
 #     item.save!
 #   end
@@ -66,7 +66,7 @@ item1 = Item.new(
 
 file_url = "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 file = URI.open(file_url)
-item1.photo.attach(io: file, filename: "nes.png", content_type: "image/jpeg")
+item1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 item1.save!
 
 item2 = Item.new(
@@ -78,7 +78,7 @@ item2 = Item.new(
 
 file_url = "https://www.coku.co.uk/cdn/shop/products/9D6C3F91-95C9-421A-BC54-46136641C88F_1445x.jpg?v=1682000784"
 file = URI.open(file_url)
-item2.photo.attach(io: file, filename: "table.png", content_type: "image/jpeg")
+item2.photo.attach(io: file, filename: "table.png", content_type: "image/png")
 item2.save!
 
 item3 = Item.new(
@@ -90,7 +90,7 @@ item3 = Item.new(
 
 file_url = "https://cdn.shopify.com/s/files/1/0688/8872/3766/files/disco_ball_invented_1_480x480.jpg?v=1684972239"
 file = URI.open(file_url)
-item3.photo.attach(io: file, filename: "discoball.png", content_type: "image/jpeg")
+item3.photo.attach(io: file, filename: "discoball.png", content_type: "image/png")
 item3.save!
 
 item4 = Item.new(
@@ -101,7 +101,7 @@ item4 = Item.new(
 
 file_url = "https://i.etsystatic.com/10559245/r/il/906903/2046350675/il_570xN.2046350675_hvu8.jpg"
 file = URI.open(file_url)
-item4.photo.attach(io: file, filename: "partyhats.png", content_type: "image/jpeg")
+item4.photo.attach(io: file, filename: "partyhats.png", content_type: "image/png")
 item4.save!
 
 item5 = Item.new(
@@ -113,7 +113,7 @@ item5 = Item.new(
 
 file_url = "https://m.media-amazon.com/images/I/81qfKN5-OFS._AC_UF894,1000_QL80_.jpg"
 file = URI.open(file_url)
-item5.photo.attach(io: file, filename: "outdoorlights.png", content_type: "image/jpeg")
+item5.photo.attach(io: file, filename: "outdoorlights.png", content_type: "image/png")
 item5.save!
 
 item6 = Item.new(
@@ -125,7 +125,7 @@ item6 = Item.new(
 
 file_url = "https://cdn.myonlinestore.eu/93bf9c9a-6be1-11e9-a722-44a8421b9960/image/cache/full/dda2ba5fabaa45cd53659addcf4212195ca579a9.jpg?20240214105342"
 file = URI.open(file_url)
-item6.photo.attach(io: file, filename: "stereo.png", content_type: "image/jpeg")
+item6.photo.attach(io: file, filename: "stereo.png", content_type: "image/png")
 item6.save!
 
 item7 = Item.new(
@@ -137,7 +137,7 @@ item7 = Item.new(
 
 file_url = "https://i.etsystatic.com/31178789/r/il/ba8375/3643189366/il_570xN.3643189366_p826.jpg"
 file = URI.open(file_url)
-item7.photo.attach(io: file, filename: "glowsticks.png", content_type: "image/jpeg")
+item7.photo.attach(io: file, filename: "glowsticks.png", content_type: "image/png")
 item7.save!
 
 
@@ -150,7 +150,7 @@ item8 = Item.new(
 
 file_url = "https://emielspartyverhuur.nl/wp-content/uploads/2016/11/o16bwmya.bmp"
 file = URI.open(file_url)
-item8.photo.attach(io: file, filename: "bigtent.png", content_type: "image/jpeg")
+item8.photo.attach(io: file, filename: "bigtent.png", content_type: "image/png")
 item8.save!
 
 item9 = Item.new(
@@ -162,7 +162,7 @@ item9 = Item.new(
 
   file_url = "https://www.thespruce.com/thmb/agMCiMTigXWwoplUPJTeHy1wQ6M=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-outdoor-table-plans-5070848-hero-e56542f9054c4a92b888438f5e598fcc.jpg"
   file = URI.open(file_url)
-  item9.photo.attach(io: file, filename: "bigtable.png", content_type: "image/jpeg")
+  item9.photo.attach(io: file, filename: "bigtable.png", content_type: "image/png")
   item9.save!
 
 item10 = Item.new(
@@ -174,7 +174,7 @@ item10 = Item.new(
 
   file_url = "https://savagevines.co.uk/wp-content/uploads/2021/11/L-Atelier-Du-Vin-Champagne-Glass-Set-900x0-c-default.jpg"
   file = URI.open(file_url)
-  item10.photo.attach(io: file, filename: "glasses.png", content_type: "image/jpeg")
+  item10.photo.attach(io: file, filename: "glasses.png", content_type: "image/png")
   item10.save!
 
 
