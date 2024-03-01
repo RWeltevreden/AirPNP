@@ -1,36 +1,34 @@
 // Specific CSS for your home-page
 .banner {
-  padding: 20px;
+  padding: 1px;
   margin-bottom: 20px;
   height: 500px;
-  border-radius: 20px;
+  background-size: 100%;
 }
 
 .head{
   font-family: "Open Sans", sans-serif;
-  text-align: center;
+  text-align: left;
   margin-top: 150px;
   h1 {
-    font-size: 70px;
+    font-size: 150px;
+    font-weight: bold;
     color: white;
   }
-  p {
-    font-size: 20px;
+  h5 {
     color: white;
   }
 }
 
 .homepage {
-  // background-color: #f2e9d6;
   height: 1300px;
-  padding: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
 }
 
 #popular {
     text-align: center;
-    color: rgb(209, 202, 202);
+    color: rgb(73, 72, 72);
     align-items: center;
     margin-top: 40px
 }
