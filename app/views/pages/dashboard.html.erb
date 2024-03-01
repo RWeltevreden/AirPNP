@@ -11,7 +11,7 @@
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
                   <div class="profile-picture mb-2">
-                  <%= cl_image_tag current_user.avatar.key, class:"card-img-top rounded-circle", height: 300 if current_user.avatar.attached? %>
+                  <%= cl_image_tag current_user.avatar.key, class:"card-img-top card-user-avatar rounded-circle" if current_user.avatar.attached? %>
                   </div>
 
 
