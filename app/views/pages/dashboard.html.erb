@@ -89,6 +89,7 @@
 
       <div class="card-header">My received bookings</div>
         <div class="card-body row">
+        <p>No received bookings yet.</p>
         <% @received_bookings.each do |booking| %>
           <div class="col-3">
            <%= cl_image_tag booking.item.photo.key, class:"card-img", height: 300 if booking.item.photo.attached? %>
