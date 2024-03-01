@@ -23,12 +23,12 @@ class ItemsController < ApplicationController
 
 
 
-    @markers =
+    @markers = [
       {
         lat: @item.latitude,
         lng: @item.longitude
       }
-
+    ]
 
   end
 

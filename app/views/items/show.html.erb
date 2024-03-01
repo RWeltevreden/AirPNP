@@ -1,3 +1,4 @@
+
 <div class="container px-4 mt-4">
     <h2>Item</h2>
     <hr class="mt-0 mb-4">
@@ -27,5 +28,30 @@
           <%= f.submit "Create Booking", class: "btn btn-primary" %>
         <% end %>
     </div>
+
+<div class="container-fluid text-center mt-3">
+  <div class="item-photo">
+        <%= image_tag(@item.photo.url, width: 400, height: 300, crop: :fill) %>
+
+    </div><br>
+  <div>
+    <h3><strong><%= @item.name %></strong></h3>
+    <p><%= @item.description %></p>
+    <p><%= @item.location %></p>
+    <p><%= @item.price %></p>
+  </div>
+
+<div style="width: 50%; height: 300px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+  <div class="booking-form">
+      <%= simple_form_for([@item, @booking], html: { multipart: true }) do |f| %>
+        <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+        <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+        <%= f.submit %>
+      <% end %>
+
   </div>
 </div>

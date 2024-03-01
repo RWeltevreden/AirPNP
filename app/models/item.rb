@@ -2,8 +2,6 @@ class Item < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
-  has_many :bookings
-
   has_many :bookings, dependent: :destroy
 
   belongs_to :user
@@ -16,7 +14,7 @@ class Item < ApplicationRecord
   validates :photo, presence: true
 
   def self.search(query)
-    where("name LIKE ?", "%#{query}%")
+    where("name ILIKE ?", "%#{query}%")
   end
 
 end
