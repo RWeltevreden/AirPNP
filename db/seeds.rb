@@ -59,24 +59,26 @@ user3.save
 puts "creating items"
 item1 = Item.new(
   user: user1,
-  name: "Party tent",
+  name: "Big Party Tent",
   price: "#{rand(1..200)} €",
-  description: "Can fit up to 50 people",
-  location: "Amsterdam")
+  description: "Perfect for birthdays, weddings, corporate events, or any special occasion.
+  Can fit up to 50 people",
+  location: "Marcantilaan, Amsterdam")
 
-file_url = "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+file_url = "https://images.unsplash.com/photo-1692166927778-056466153552?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
 file = URI.open(file_url)
-item1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+item1.photo.attach(io: file, filename: "50tent.png", content_type: "image/png")
 item1.save!
 
 item2 = Item.new(
   user: user1,
   name: "table",
   price: "#{rand(1..200)} €",
-  description: "Suited for outdoors",
-  location: "Amsterdam")
+  description: "Create the perfect layout for an unforgettable dining experience.
+  Suited for outdoors",
+  location: "Keizersgracht, Amsterdam")
 
-file_url = "https://www.coku.co.uk/cdn/shop/products/9D6C3F91-95C9-421A-BC54-46136641C88F_1445x.jpg?v=1682000784"
+file_url = "https://www.coku.co.uk/cdn/shop/products/9D6C3F91-95C9-421A-BC54-46136641C88F_1445x.jpg?v=1682000784.jpg"
 file = URI.open(file_url)
 item2.photo.attach(io: file, filename: "table.png", content_type: "image/png")
 item2.save!
@@ -85,10 +87,10 @@ item3 = Item.new(
   user: user1,
   name: "disco ball",
   price: "#{rand(1..200)} €",
-  description: "Creating a beautiful atmosphere",
-  location: "Oost")
+  description: "Barely used, but excellent working disco ball. Creates a beautiful atmosphere",
+  location: "Rembrandtweg, Amsterdam")
 
-file_url = "https://cdn.shopify.com/s/files/1/0688/8872/3766/files/disco_ball_invented_1_480x480.jpg?v=1684972239"
+file_url = "https://cdn.shopify.com/s/files/1/0688/8872/3766/files/disco_ball_invented_1_480x480.jpg?v=1684972239.jpg"
 file = URI.open(file_url)
 item3.photo.attach(io: file, filename: "discoball.png", content_type: "image/png")
 item3.save!
@@ -97,7 +99,9 @@ item4 = Item.new(
   user: user2,
   name: "Party hats",
   price: "#{rand(1..200)} €",
-  description: "20 hats", location: "Amsterdam")
+  description: "I am renting out 30 party hats, available in different colors.
+  The hats come in one size that fits all",
+  location: "Dam 5, Amsterdam")
 
 file_url = "https://i.etsystatic.com/10559245/r/il/906903/2046350675/il_570xN.2046350675_hvu8.jpg"
 file = URI.open(file_url)
@@ -108,8 +112,8 @@ item5 = Item.new(
   user: user2,
   name: "Outdoor lights",
   price: "#{rand(1..200)} €",
-  description: "5 meters",
-  location: "Amsterdam")
+  description: "Comes with adjustable brightness levels and color options. Length is 6 meters",
+  location: "Muntplein, Amsterdam")
 
 file_url = "https://m.media-amazon.com/images/I/81qfKN5-OFS._AC_UF894,1000_QL80_.jpg"
 file = URI.open(file_url)
@@ -120,10 +124,10 @@ item6 = Item.new(
   user: user2,
   name: "Stereo set",
   price: "#{rand(1..200)} €",
-  description: "Suitable for parties",
-  location: "Amstelveen")
+  description: "Brand new stereo set that does not get used enough. Comes with a microphone and a speaker.",
+  location: "Laan van Langerhuize, Amstelveen")
 
-file_url = "https://cdn.myonlinestore.eu/93bf9c9a-6be1-11e9-a722-44a8421b9960/image/cache/full/dda2ba5fabaa45cd53659addcf4212195ca579a9.jpg?20240214105342"
+file_url = "https://cdn.myonlinestore.eu/93bf9c9a-6be1-11e9-a722-44a8421b9960/image/cache/full/dda2ba5fabaa45cd53659addcf4212195ca579a9.jpg?20240214105342.jpg"
 file = URI.open(file_url)
 item6.photo.attach(io: file, filename: "stereo.png", content_type: "image/png")
 item6.save!
@@ -132,8 +136,9 @@ item7 = Item.new(
   user: user2,
   name: "Glow sticks",
   price: "#{rand(1..200)} €",
-  description: "Available in 5 different colors",
-  location: "Amsterdam")
+  description: "Crafted from safe materials, the glow sticks cater to all age groups.
+  Available in 5 different colors",
+  location: "Prinsengracht, Amsterdam")
 
 file_url = "https://i.etsystatic.com/31178789/r/il/ba8375/3643189366/il_570xN.3643189366_p826.jpg"
 file = URI.open(file_url)
@@ -145,8 +150,8 @@ item8 = Item.new(
   user: user3,
   name: "Party tent",
   price: "#{rand(1..200)} €",
-  description: "Can fit up to 30 people",
-  location: "Utrecht")
+  description: "Easy to set up and dismantle. Can fit up to 30 people",
+  location: "Spui, Amsterdam")
 
 file_url = "https://emielspartyverhuur.nl/wp-content/uploads/2016/11/o16bwmya.bmp"
 file = URI.open(file_url)
@@ -157,8 +162,8 @@ item9 = Item.new(
   user: user3,
   name: "Outdoor table",
   price: "#{rand(1..200)} €",
-  description: "Suitable for bbq's",
-  location: "Den Haag")
+  description: "Suitable for bbq's and outdoor parties. Pickup only.",
+  location: "Spiegelgracht, Amsterdam")
 
   file_url = "https://www.thespruce.com/thmb/agMCiMTigXWwoplUPJTeHy1wQ6M=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-outdoor-table-plans-5070848-hero-e56542f9054c4a92b888438f5e598fcc.jpg"
   file = URI.open(file_url)
@@ -169,13 +174,121 @@ item10 = Item.new(
   user: user3,
   name: "Champagne glasses",
   price: "#{rand(1..200)} €",
-  description: "Different colors available",
-  location: "Amsterdam")
+  description: "Good quality glasses, available in different colors",
+  location: "De Singel, Amsterdam")
 
   file_url = "https://savagevines.co.uk/wp-content/uploads/2021/11/L-Atelier-Du-Vin-Champagne-Glass-Set-900x0-c-default.jpg"
   file = URI.open(file_url)
   item10.photo.attach(io: file, filename: "glasses.png", content_type: "image/png")
   item10.save!
+
+item11 = Item.new(
+  user: user3,
+  name: "Balloons",
+  price: "#{rand(1..200)} €",
+  description: "These balloons come in a wide array of shapes, sizes, and vibrant colors.",
+  location: "De Singel, Amsterdam")
+
+  file_url = "https://images.unsplash.com/photo-1581909199603-0de32b43ffd2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+  file = URI.open(file_url)
+  item11.photo.attach(io: file, filename: "balloons.png", content_type: "image/png")
+  item11.save!
+
+  item12 = Item.new(
+    user: user3,
+    name: "Party decorations",
+    price: "#{rand(1..200)} €",
+    description: "Variety of fun party decorations. More details after booking.",
+    location: "De Singel, Amsterdam")
+
+    file_url = "https://images.unsplash.com/photo-1532117182044-031e7cd916ee?q=80&w=2380&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+    file = URI.open(file_url)
+    item12.photo.attach(io: file, filename: "decorations.png", content_type: "image/png")
+    item12.save!
+
+  item13 = Item.new(
+    user: user3,
+    name: "Boho party tents",
+    price: "#{rand(1..200)} €",
+    description: "5 boho tents available for outdoor parties.",
+    location: "De Singel, Amsterdam")
+
+    file_url = "https://images.unsplash.com/photo-1621744934759-4b5132843ea6?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+    file = URI.open(file_url)
+    item13.photo.attach(io: file, filename: "boho.png", content_type: "image/png")
+    item13.save!
+
+    item14 = Item.new(
+      user: user2,
+      name: "cocktail glasses",
+      price: "#{rand(1..200)} €",
+      description: "Variation of cocktail glasses available for rent. Good quality. Max 15 glasses",
+      location: "De Singel, Amsterdam")
+
+      file_url = "https://images.unsplash.com/photo-1654074517750-f854f7c27d62?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+      file = URI.open(file_url)
+      item14.photo.attach(io: file, filename: "cocktail.png", content_type: "image/png")
+      item14.save!
+
+      item15 = Item.new(
+        user: user2,
+        name: "Cozy party lights",
+        price: "#{rand(1..200)} €",
+        description: "Cozy party lights available for outdoor spaces",
+        location: "De Singel, Amsterdam")
+
+        file_url = "https://plus.unsplash.com/premium_photo-1664790560108-68d81ca35c0d?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+        file = URI.open(file_url)
+        item15.photo.attach(io: file, filename: "cocktail.png", content_type: "image/png")
+        item15.save!
+
+    item16 = Item.new(
+        user: user1,
+        name: "Birthday hats",
+        price: "#{rand(1..200)} €",
+        description: "Fun for children's birthday parties. Available in different colors. Max 20 hats.",
+        location: "De Singel, Amsterdam")
+
+        file_url = "https://images.unsplash.com/photo-1581509756622-8d74eee78b52?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+        file = URI.open(file_url)
+        item16.photo.attach(io: file, filename: "birthday.png", content_type: "image/png")
+        item16.save!
+
+        item17 = Item.new(
+          user: user1,
+          name: "Baby shower balloons",
+          price: "#{rand(1..200)} €",
+          description: "Beautiful balloons for a baby shower. Also available in pink!",
+          location: "De Singel, Amsterdam")
+
+          file_url = "https://images.unsplash.com/photo-1499781749692-e8274262c718?q=80&w=2295&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+          file = URI.open(file_url)
+          item17.photo.attach(io: file, filename: "babyshower.png", content_type: "image/png")
+          item17.save!
+
+          item18 = Item.new(
+            user: user1,
+            name: "Halloween decorations",
+            price: "#{rand(1..200)} €",
+            description: "halloween decorations for a spooky atmosphere. 20 pieces.",
+            location: "De Singel, Amsterdam")
+
+            file_url = "https://images.unsplash.com/photo-1695302769496-3ed9d329c16e?q=80&w=2380&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+            file = URI.open(file_url)
+            item18.photo.attach(io: file, filename: "halloween.png", content_type: "image/png")
+            item18.save!
+
+            item19 = Item.new(
+              user: user3,
+              name: "Glow lights",
+              price: "#{rand(1..200)} €",
+              description: "40 pieces glow lights available in blue and green!",
+              location: "De Singel, Amsterdam")
+
+              file_url = "https://images.unsplash.com/photo-1572037958571-83764a7e4f9e?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+              file = URI.open(file_url)
+              item19.photo.attach(io: file, filename: "sticks.png", content_type: "image/png")
+              item19.save!
 
 
 # photos = [
