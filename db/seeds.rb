@@ -109,7 +109,7 @@ item5 = Item.new(
   name: "Outdoor lights",
   price: "#{rand(1..200)} €",
   description: "5 meters",
-  location: "West")
+  location: "Amsterdam")
 
 file_url = "https://m.media-amazon.com/images/I/81qfKN5-OFS._AC_UF894,1000_QL80_.jpg"
 file = URI.open(file_url)
@@ -146,7 +146,7 @@ item8 = Item.new(
   name: "Party tent",
   price: "#{rand(1..200)} €",
   description: "Can fit up to 30 people",
-  location: "Zuidoost")
+  location: "Utrecht")
 
 file_url = "https://emielspartyverhuur.nl/wp-content/uploads/2016/11/o16bwmya.bmp"
 file = URI.open(file_url)
@@ -158,7 +158,7 @@ item9 = Item.new(
   name: "Outdoor table",
   price: "#{rand(1..200)} €",
   description: "Suitable for bbq's",
-  location: "Noord")
+  location: "Den Haag")
 
   file_url = "https://www.thespruce.com/thmb/agMCiMTigXWwoplUPJTeHy1wQ6M=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-outdoor-table-plans-5070848-hero-e56542f9054c4a92b888438f5e598fcc.jpg"
   file = URI.open(file_url)
@@ -170,7 +170,7 @@ item10 = Item.new(
   name: "Champagne glasses",
   price: "#{rand(1..200)} €",
   description: "Different colors available",
-  location: "Centrum")
+  location: "Amsterdam")
 
   file_url = "https://savagevines.co.uk/wp-content/uploads/2021/11/L-Atelier-Du-Vin-Champagne-Glass-Set-900x0-c-default.jpg"
   file = URI.open(file_url)

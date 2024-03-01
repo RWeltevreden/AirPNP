@@ -21,6 +21,15 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @booking = @item.bookings.build
 
+
+
+    @markers =
+      {
+        lat: @item.latitude,
+        lng: @item.longitude
+      }
+
+
   end
 
   def index
@@ -52,5 +61,3 @@ class ItemsController < ApplicationController
     redirect_to dashboard_path, status: :see_other
   end
 end
-
-
