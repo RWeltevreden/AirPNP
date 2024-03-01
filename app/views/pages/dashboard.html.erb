@@ -14,10 +14,7 @@
                     <%= cl_image_tag current_user.avatar.key, class: "avatar", alt: "User avatar" %>
                   </div>
 
-                    <!-- Profile picture help block-->
-                  <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
-                    <!-- Profile picture upload button-->
-                  <button class="btn btn-primary" type="button">Upload new image</button>
+
                 </div>
           </div>
       </div>
@@ -41,26 +38,32 @@
 
 
   <div class="col-xl-12 d-flex align-items-center justify-content-center">
-    <div class="card mb-4 mx-auto w-100">
+    <div class="card mb-4 mx-auto w-100 card-item card-listings">
       <div class="card-header">Your listings</div>
         <div class="card-body row">
            <% @items.each do |item| %>
             <div class="col-3">
-           <%= cl_image_tag item.photo.key, class:"card-img-top", height: 300 if item.photo.attached? %>
+           <%= cl_image_tag item.photo.key, class:"card-img", height: 300 if item.photo.attached? %>
+           <div class="card-body">
            <h4><%= link_to item.name.capitalize, item_path(item) %></h4>
-           <p><%= link_to "Edit item", edit_item_path(item)%></p>
-           <p><%= link_to "Delete", item_path(item),
-              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p>
+           <hr class="mt-0 mb-4">
+           <p>€<%= item.price %>.-</p>
+           <p><%= item.location %></p>
+            </div>
+           <%= link_to "Edit", edit_item_path(item), class: "btn btn-primary", class: "btn-dashboard"%>
+           <%= link_to "Delete", item_path(item),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary", class: "btn-dashboard"%>
               </div>
            <% end %>
-        </div>
+           </div>
+
       </div>
     </div>
-    <%= link_to "Add a new item", new_item_path %>
+
 
 
   <div class="col-xl-12 d-flex align-items-center justify-content-center">
-    <div class="card mb-4 mx-auto w-100">
+    <div class="card mb-4 mx-auto w-100 card-booking">
       <div class="card-header">My bookings</div>
         <div class="card-body">
           <% @bookings.each do |booking| %>
@@ -71,13 +74,14 @@
   </div>
 
   <div class="col-xl-12 d-flex align-items-center justify-content-center">
-    <div class="card mb-4 mx-auto w-100">
+    <div class="card mb-4 mx-auto w-100 card-booking">
+
       <div class="card-header">My received bookings</div>
         <div class="card-body">
         <% @received_bookings.each do |booking| %>
           <%= booking.start_date %>
         <% end %>
         </div>
-    </div>
+
   </div>
 </div>

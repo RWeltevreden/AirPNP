@@ -1,6 +1,7 @@
-<div class="container">
-
+<div class="container px-4 mt-4">
   <h2>Edit your item</h2>
+  <hr class="mt-0 mb-4">
+
 
   <%= simple_form_for(@item, html: { multipart: true }) do |f| %>
     <!-- [...] -->
@@ -9,7 +10,7 @@
     <%= f.input :description, as: :string %>
     <%= f.input :location, as: :string %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <%= f.submit "Edit", class: "btn btn-primary" %>
     <!-- [...] -->
   <% end %>
 </div>
