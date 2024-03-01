@@ -15,7 +15,7 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-  <div>
+  <div class="booking-form">
       <%= simple_form_for([@item, @booking], html: { multipart: true }) do |f| %>
         <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
         <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
