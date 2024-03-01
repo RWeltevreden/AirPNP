@@ -314,3 +314,39 @@ item11 = Item.new(
 # # end
 
 # item.save!
+
+puts "create bookings"
+# Booking that user1 received
+booking1 = Booking.new(
+  start_date: Date.today,
+  end_date: Date.today + 1,
+  item: item1,
+  user: user2
+)
+booking1.save!
+
+booking3 = Booking.new(
+  start_date: Date.today,
+  end_date: Date.today + 1,
+  item: item3,
+  user: user2
+)
+booking3.save!
+
+# Booking that user1 made
+booking2 = Booking.new(
+  start_date: Date.today,
+  end_date: Date.today + 1,
+  item: item4,
+  user: user1
+)
+
+booking2.save!
+
+booking4 = Booking.new(
+  start_date: Date.today,
+  end_date: Date.today + 1,
+  item: item9,
+  user: user1
+)
+booking4.save!
