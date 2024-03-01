@@ -15,10 +15,10 @@
         <%= form_with url: items_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "form-control form-control-search",
             placeholder: "Search for an item"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary ml-3"%>
     <% end %>
       </div>
     </div>
@@ -31,8 +31,8 @@
           <li class="nav-item active">
             <%# deleted link to home page %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Add new item", "/items/new", class: "btn btn-primary" %>
+          <li class="nav-item mr-3" style="padding-top: 9px;">
+            <%= link_to "Add new item", "/items/new", class: "btn btn-primary"%>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
