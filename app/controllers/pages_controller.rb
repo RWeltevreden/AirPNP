@@ -19,11 +19,10 @@ class PagesController < ApplicationController
     end
   end
 
-
   def dashboard
     @user = current_user
     @items = Item.all.where(user_id: current_user.id).limit(4) if current_user
     @bookings = Booking.all.where(user_id: current_user.id) if current_user
+    @received_bookings = current_user.received_bookings
   end
-
 end
