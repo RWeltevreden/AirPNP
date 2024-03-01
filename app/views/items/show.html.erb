@@ -1,5 +1,5 @@
 <div class="container-fluid text-center mt-3">
-      <%= link_to "Back to listings", items_path %> 
+      <%= link_to "Back to listings", items_path %>
 
   <div class="item-photo">
         <%= image_tag(@item.photo.url, width: 400, height: 300, crop: :fill) %>
@@ -12,15 +12,18 @@
     <p><%= @item.price %></p>
   </div>
 
-  <div>
-    <%# <%= text_field_tag :opening_date, nil, placeholder: 'Choose a date', data: { controller: "datepicker" } %> %>
-    <%# <button type="button" class="btn btn-light" id="bookButton">Book</button> %>
-
-
+ <div id="booking-form">
       <%= simple_form_for([@item, @booking], html: { multipart: true }) do |f| %>
-        <%= f.input :start_date, as: :string %>
-        <%= f.input :end_date, as: :string %>
-        <%= f.submit %>
+        <% f.input :start_date, as: :string,
+                  #  :end_date, as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+         <%= f.submit %>
       <% end %>
   </div>
-</div>
+ </div>
+
+
+    <%# <%= text_field_tag :opening_date, nil, placeholder: 'Choose a date', data: { controller: "datepicker" }
+    <button type="button" class="btn btn-light" id="bookButton">Book</button> %>
+
+ 
